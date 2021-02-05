@@ -1,6 +1,6 @@
 import Cocoa
 
-protocol LoadedNibView: class {
+public protocol LoadedNibView: class {
     var nibName : String { get }
     func load() -> Bool
 
@@ -8,7 +8,7 @@ protocol LoadedNibView: class {
 }
 
 
-extension LoadedNibView where Self: NSView {
+public extension LoadedNibView where Self: NSView {
     
     var nibName: String {
         return String(describing: Self.self)
