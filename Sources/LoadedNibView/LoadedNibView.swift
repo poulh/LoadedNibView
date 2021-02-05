@@ -1,9 +1,12 @@
 import Cocoa
 
 public protocol LoadedNibView: class {
+    init(frame: NSRect)
+    init?(coder aDecoder: NSCoder)
+    
     var nibName : String { get }
     func load() -> Bool
-
+    
     var view: NSView? { get set }
 }
 
